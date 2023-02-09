@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Result{% endblock title %}
+{% block body %}
+
+<div class="my-5 ">
+
+    <div class="card py-2 px-5 text-bg-dark" style="width: 60%; margin: auto !important;">
+        <div class="card-body">
+            <h1>Your Analyzed Text - {{ purpose }}</h1><br>
+            <p>
+            <pre>{{analyzed_text}}</pre>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}

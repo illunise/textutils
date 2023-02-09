@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}Text Utils Tools{% endblock title %}
+{% block body %}
+
+<div class="pt-5 mt-5 mx-5 mb-2" style="width: 60%; margin: auto !important;">
+    <h1 class="" style="font-weight:bold;">Hello, Welcome to Text Analyzer</h1>
+</div>
+
+<div class="card py-2 px-5 text-bg-dark" style="width: 60%; margin: auto !important;">
+    <div class="card-body">
+        <form action="/process" class="" method="post"> {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label" for="exampleFormControlTextarea1">Enter Your Text Below</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3"></textarea>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" id="flexCheckDefault" name="removePunctuation" type="checkbox">
+                <label class="form-check-label" for="flexCheckDefault">Remove Punctuation</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" id="flexCheckChecked" name="allCaps" type="checkbox">
+                <label class="form-check-label" for="flexCheckChecked">All Caps</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" id="flexCheckChecked1" name="newLineRemove" type="checkbox">
+                <label class="form-check-label" for="flexCheckChecked1">New Line Remover</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" id="flexCheckChecked2" name="spaceRemove" type="checkbox">
+                <label class="form-check-label" for="flexCheckChecked2">Extra Space Remover</label>
+            </div>
+
+
+            <button class="btn btn-outline-primary my-3 btn-outline-light btn-lg" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock body %}
